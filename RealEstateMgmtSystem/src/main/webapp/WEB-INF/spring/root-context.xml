@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+<!-- <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+ 
+     <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+     <property name="url" value="jdbc:mysql://localhost:3306/realestate" />
+     <property name="username" value="root" />
+     <property name="password" value="root" />
+  </bean>
+  		 -->
+  		 <bean id="fileValidator" class="com.neu.webtools.validator.UploadValidator"></bean>
+  		 	<bean id="userValidator" class="com.neu.webtools.validator.UserValidator"></bean>
+		<!-- <bean id="propertyValidator" class="com.neu.webtools.validator.PropertyValidator"></bean> -->
+		<bean id="userDao" class="com.neu.webtools.dao.UserDAO"></bean>
+		<bean id="msgDao" class="com.neu.webtools.dao.MessageDAO"></bean>
+		<bean id="fileObj" class="com.neu.webtools.pojo.ImgUpload"></bean>
+		<bean id="propertyDAO" class="com.neu.webtools.dao.PropertyDAO"></bean>
+		
+		
+		<bean id="dataSource" name="dataSource"
+       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       <property name="username" value="root"></property>
+       <property name="password" value="root"></property>
+       <property name="driverClassName">
+           <value>com.mysql.jdbc.Driver</value>
+       </property>
+       <property name="url" value="jdbc:mysql://localhost:3306/realestate">
+       </property>
+   </bean>
+		
+
+
+</beans>

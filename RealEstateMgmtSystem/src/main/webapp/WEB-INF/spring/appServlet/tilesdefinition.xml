@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="DefaultTemplate" template="/WEB-INF/views/templateLayout.jsp">
+       <put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+       <put-attribute name="body" value="" />
+       <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+   </definition>
+   
+   <definition extends="DefaultTemplate" name="CustomerHome">  
+      <put-attribute name="title" value="Home Tiles View"></put-attribute>  
+      <put-attribute name="body" value="/WEB-INF/views/CustomerHome.jsp"></put-attribute>  
+  </definition>
+   
+</tiles-definitions>
